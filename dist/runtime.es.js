@@ -133,7 +133,8 @@ export default (function(exports) {
     if (val === true) {
       return ' ' + (terse ? key : key + '="' + key + '"');
     }
-    if (typeof val.toJSON === 'function') {
+    var type = typeof val;
+    if ((type === 'object' || type === 'function') && typeof val.toJSON === 'function') {
       val = val.toJSON();
     }
     if (typeof val !== 'string') {
