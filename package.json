@@ -4,7 +4,7 @@
   "description": "Transforms Pug (aka Jade) templates to ES6 modules.",
   "main": "dist/rollup-plugin-pug.js",
   "scripts": {
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha -- test/run.js",
+    "test2": "istanbul cover ./node_modules/mocha/bin/_mocha -- test/run.js",
     "pretest": "npm run build && rimraf ./test/~tmp/*",
     "build": "rimraf ./dist/* && node ./build-rt.js && rollup -c",
     "prepublish": "npm run lint && npm test",
